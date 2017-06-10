@@ -298,3 +298,294 @@ Response Example:
   "message": "OK"
 }
 ```
+
+
+- [排场信息](#排场信息)
+    - [影院上映信息及排场信息](#影院上映信息及排场信息)
+## 排场信息
+Request URI:
+
+```
+GET /api/show?cinemaId&movieId
+```
+
+返回数据为是否有改场次电影
+
+返回数据为一组*电影简介数据*集合
+
+*排场信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  code | INTEGER | 状态码 |
+|  data | STRING | 状态信息 |
+|  message | STRING | 返回状态 |
+
+Response Example:
+
+```json
+{
+    "code": 0,
+	"data":{}
+    "message": "OK"
+}
+```
+
+### 影片上映信息及排场信息
+
+返回数据为影厅及对应排场信息
+
+*影片上映信息及排场信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  code | INTEGER | 状态码 |
+|  Dates | STRING | 上映日期 |
+|  cinemaDetailModel | MAP | 影院详情 |
+|  sells | BOOLEAN | 是否在售 |
+|  lat | STRING | 纬度 |
+|  lng | STRING | 经度 |
+|  ct | STRING | 城市 |
+|  ... | ... | ... |
+
+Response Example:
+
+```json
+{
+	"code":0,
+	"data":
+		{"Dates":[],
+		"currentMovie":"",
+		"cinemaDetailModel":{"callboard":"","brd":"其它","dis":"","tel"["029-84561999","400-899-9527"],"suw":"","dri":"","note":"","dealtp":0,"deals":"","preferential":0,"sellmin":0,"sell":true,"lat":34.20359,"lng":108.98846,"ct":"安","imax":0,"snum":42,"nm":"奥斯卡金地国际影城(金地广场)","price":0,"s":8.285714,"s1":8.285714,"s2":8.476191,"s3":8.238095,"featureTags":[{"desc":"限网上选座后取票","type":1,"tag":"取票机"},
+		{"desc":"一号激光厅，152个座位；二号激光厅，152个座位；三号激光厅，152个座位；四号厅，195个座位；五号激光厅，113个座位；六号激光厅，116个座位；七号激光厅，113个座位","type":19,"tag":"60帧厅"},{"desc":"I Do巨幕厅，447个座位；巨幕厅","type":15,"tag":"杜比全景声厅"},{"desc":"1.3米以下儿童可免费观看电影（无座），每位成人仅限携带1名免票儿童。","type":7,"tag":"儿童优惠"}],"park":"","addr":"雁塔区曲江池东路金地广场4楼（飞象披萨对面）","area":"雁塔区","bus":"","id":11533},"movies":[{"img":"http://p1.meituan.net/165.220/movie/4185bf22758d232e15c5bf52f89a7553867763.png","sc":7,"preferential":0,"ver":"2D/3D/IMAX 3D/中国巨幕","nm":"新木乃伊","isShowing":true,"id":249895},{"img":"http://p1.meituan.net/165.220/movie/f013c57e9506cd2e7c609397c8da04d9213647.jpg","sc":8.6,"preferential":0,"ver":"3D/IMAX 3D/中国巨幕/全景声","nm":"神奇女侠","isShowing":true,"id":247731},
+		...
+```
+
+- [选座信息](#选座信息)
+
+## 选座信息
+
+Request
+
+```
+GET /api/seat?showId&showDate
+```
+
+返回数据为一组*座位状态信息*
+
+*选座信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  code | INTEGER | 该座位状态码 |
+|  messege | STRING | 状态信息 |
+
+Response Example:
+
+```json
+{
+    "code":0,
+	"message":"OK"
+}
+```
+
+- [区域类](#区域类)
+    - [获取全部区域列表](#获取全部区域列表)
+<a name="电影类"></a>
+## 区域类
+
+<a name="获取全部区域列表"></a>
+### 获取全部区域列表
+
+Request URI:
+
+```
+GET /api/air
+```
+
+返回数据为一组*全部区域*集合
+
+*获取全部区域列表* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  code | INTEGER | 状态码 |
+|  id | INTEGER | 区域编码 |
+|  nm | STRING | 区域名称 |
+|  message | STRING | 状态信息 |
+
+Response Example:
+
+```json
+{
+    {"code":0,
+	"data":[{"id":0,"nm":"番禺区"},
+	{"id":1,"nm":"白云区"},
+	{"id":2,"nm":"天河区"},
+	{"id":3,"nm":"海珠区"},
+	{"id":4,"nm":"越秀区"},
+	{"id":5,"nm":"荔湾区"},
+	{"id":6,"nm":"增城区"},
+	{"id":7,"nm":"花都区"},
+	{"id":8,"nm":"黄埔区"},
+	{"id":9,"nm":"南沙区"},
+	{"id":10,"nm":"从化区"}],
+	"message":"OK"}
+}
+```
+
+- [影院类](#影院类)
+    - [获取全部影院列表](#获取影院信息)
+    - [获取所在区域影院列表](#获取影院信息)
+    - [获取按距离获取所在区域影院列表](#获取按距离获取所在区域影院列表)
+<a name="影院类"></a>
+## 影院类
+
+<a name="获取影院信息"></a>
+### 获取全部影院信息
+
+Request URI:
+
+```
+GET /api/cinema
+```
+
+返回数据为一组*所有影院信息*集合
+
+*全部影院信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  id | INTEGER | 影院id |
+|  addr | STRING | 影院地址 |
+|  brd | STRING | 影城名称 |
+|  lat | FLOAT | 经度 |
+|  lng | FLOAT | 维度 |
+|  imax | BOOLEAN | 是否为IMAX |
+|  sellPrice | INTEGER | 票价 |
+|  sell | BOOL | 是否在售 falte-否 true-是 |
+|  nm | STRING | 影院名 |
+|  area | STRING | 区域 |
+|  areaId | INTEGER | 区域ID |
+
+Response Example:
+
+```json
+{
+    "code": 0,
+    "data": [
+      {
+        "id":3,
+		"addr":"荔湾区逢源路153号3-5楼（长寿路地铁站恒宝广场北门宝源路红绿灯右转50米）",
+		"brd":"华影万晟国际影城",
+  		"lat":23.1208,
+		"lng":113.239,
+		"imax":0,
+		"sellPrice":34,"sell":true,
+		"nm":"华影万晟国际影城",
+		"area":"荔湾区",
+		"areaId":5
+    ]
+	...,
+    "message": "OK"
+}
+```
+
+### 获取所在区域影院信息
+
+Request URI:
+
+```
+GET /api/cinema//${areaId}
+```
+
+返回数据为一组*所在区域影院信息*集合
+
+*所在区域影院信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  id | INTEGER | 影院id |
+|  addr | STRING | 影院地址 |
+|  brd | STRING | 影城名称 |
+|  lat | FLOAT | 经度 |
+|  lng | FLOAT | 维度 |
+|  imax | BOOLEAN | 是否为IMAX |
+|  sellPrice | INTEGER | 票价 |
+|  sell | BOOL | 是否在售 falte-否 true-是 |
+|  nm | STRING | 影院名 |
+|  area | STRING | 区域 |
+|  areaId | INTEGER | 区域ID |
+
+Response Example:
+
+```json
+{
+    "code": 0,
+    "data": [
+      {
+        "id":3,
+		"addr":"荔湾区逢源路153号3-5楼（长寿路地铁站恒宝广场北门宝源路红绿灯右转50米）",
+		"brd":"华影万晟国际影城",
+  		"lat":23.1208,
+		"lng":113.239,
+		"imax":0,
+		"sellPrice":34,"sell":true,
+		"nm":"华影万晟国际影城",
+		"area":"荔湾区",
+		"areaId":5
+    ]
+	...,
+    "message": "OK"
+}
+```
+
+### 获取按经纬度排序区域影院信息
+
+Request URI:
+
+```
+GET /api/cinema/${areaId}/${lat}/${lng} 
+```
+
+返回数据为一组*所在区域影院信息（按经纬度排序）*集合
+
+*按经纬度排序区域影院信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  id | INTEGER | 影院id |
+|  addr | STRING | 影院地址 |
+|  brd | STRING | 影城名称 |
+|  lat | FLOAT | 经度 |
+|  lng | FLOAT | 维度 |
+|  imax | BOOLEAN | 是否为IMAX |
+|  sellPrice | INTEGER | 票价 |
+|  sell | BOOL | 是否在售 falte-否 true-是 |
+|  nm | STRING | 影院名 |
+|  area | STRING | 区域 |
+|  areaId | INTEGER | 区域ID |
+
+Response Example:
+
+```json
+{
+    "code": 0,
+    "data": [
+      {
+        "id":3,
+		"addr":"荔湾区逢源路153号3-5楼（长寿路地铁站恒宝广场北门宝源路红绿灯右转50米）",
+		"brd":"华影万晟国际影城",
+  		"lat":23.1208,
+		"lng":113.239,
+		"imax":0,
+		"sellPrice":34,"sell":true,
+		"nm":"华影万晟国际影城",
+		"area":"荔湾区",
+		"areaId":5
+    ]
+	...,
+    "message": "OK"
+}
+```
+

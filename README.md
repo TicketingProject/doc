@@ -5,16 +5,14 @@
 - 需求：
 - 设计：
 - 开发 & 测试：
-    - 前端：徐佳豪
-    - 后端：徐广晖
+     - 前端：徐佳豪
+     - 后端：徐广晖
 
 ## Documentation
 
 - [需求文档](https://github.com/TicketingProject/doc/blob/master/%E8%BF%AD%E4%BB%A3.md)
 - [API接口文档](https://github.com/TicketingProject/doc/blob/master/server-docs/api.md)
 - [UI规范](https://github.com/TicketingProject/doc/blob/master/UI%E8%A7%84%E8%8C%83.md)
-
-## Iterations
 
 ## Iterations
 

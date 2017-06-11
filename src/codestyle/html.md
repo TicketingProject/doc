@@ -2,8 +2,6 @@
 # HTML编码规范
 
 
-
-
 [1 前言](#1-%E5%89%8D%E8%A8%80)
 
 [2 代码风格](#2-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC)
@@ -160,9 +158,7 @@ alert(document.getElementById('foo').tagName);
 </script>
 ````
 
-
 ### 2.3 标签
-
 
 #### [强制] 标签名必须使用小写字母。
 

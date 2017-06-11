@@ -1,6 +1,6 @@
 # ticketing-server API
 
-* 当前请求 domain 为：`https://movie.kaocat.com`
+* 现网 domain 为：`https://movie.kaocat.com`
 
 * 请求附加`format`参数可获取格式化后 json 数据，如：`https://movie.kaocat.com/api/movie?format`
 
@@ -16,7 +16,6 @@
 - [电影类](#电影类)
     - [获取上映及待映电影列表](#获取上映及待映电影列表)
     - [获取电影详情信息](#获取电影详情信息)
-    - [获取电影预告片URL](#获取电影预告片URL)
 - [区域类](#区域类)
     - [获取全部区域列表](#获取全部区域列表)
     - [获取当前所在区域](#获取当前所在区域)
@@ -31,7 +30,7 @@
     - [获取场次座位实时信息](#获取场次座位实时信息)
 - [用户类](#用户类)
     - [换取token](#换取token)
-- [订单类](#票务类)
+- [订单类](#订单类)
     - [下单](#下单)
     - [获取订单列表](#获取订单列表)
 
@@ -79,10 +78,6 @@
 |2000|未知用户OpenID|
 |2001|下单失败|
 
-
-- [电影类](#电影类)
-    - [获取电影详情信息](#获取电影详情信息)
-    - [获取电影预告片URL](#获取电影预告片URL)
 <a name="电影类"></a>
 ## 电影类
 
@@ -95,7 +90,7 @@ Request URI:
 GET /api/movie
 ```
 
-返回数据为一组*电影简介数据*集合
+返回数据为一组 *电影简介数据* 集合
 
 *电影简介数据* Properties:
 
@@ -194,9 +189,9 @@ GET /api/movie/:movieId
 | wish | INTEGER | 想看人数 |
 | 3d | BOOLEAN | 是否为3D |
 | scm | STRING | 电影简介 |
-| nm | STRIN | 电影名称 |
+| nm | STRING | 电影名称 |
 | rt | STRING | 上映时间 |
-| vd | STRING | 预告片 |
+| vd | STRING | 预告片URL |
 
 `photo` Properties:
 
@@ -219,7 +214,7 @@ GET /api/movie/:movieId
 | avatarurl | STRING | 用户头像 |
 | nickName | STRING | 昵称 |
 | score | INTEGER | 用户评分 |
-| userId | INTEGER | 用户id |
+| userId | INTEGER | 用户id |
 | time | STRING | 发表时间 |
 | content | STRING | 评论内容 |
 
@@ -261,7 +256,7 @@ Response Example:
         "movieId": 38977,
         "src": "http://p0.meituan.net/w.h/movie/6736eb5382a9ee440cc065240c43ac4d1048176.jpg"
       },
-      ...
+      ...
     ],
     "comments": [
       {
@@ -300,98 +295,8 @@ Response Example:
 ```
 
 
-- [排场信息](#排场信息)
-    - [影院上映信息及排场信息](#影院上映信息及排场信息)
-## 排场信息
-Request URI:
 
-```
-GET /api/show?cinemaId&movieId
-```
-
-返回数据为是否有改场次电影
-
-返回数据为一组*电影简介数据*集合
-
-*排场信息* Properties:
-
-| Property | Type | Description |
-|----------|------|-------------|
-|  code | INTEGER | 状态码 |
-|  data | STRING | 状态信息 |
-|  message | STRING | 返回状态 |
-
-Response Example:
-
-```json
-{
-    "code": 0,
-	"data":{}
-    "message": "OK"
-}
-```
-
-### 影片上映信息及排场信息
-
-返回数据为影厅及对应排场信息
-
-*影片上映信息及排场信息* Properties:
-
-| Property | Type | Description |
-|----------|------|-------------|
-|  code | INTEGER | 状态码 |
-|  Dates | STRING | 上映日期 |
-|  cinemaDetailModel | MAP | 影院详情 |
-|  sells | BOOLEAN | 是否在售 |
-|  lat | STRING | 纬度 |
-|  lng | STRING | 经度 |
-|  ct | STRING | 城市 |
-|  ... | ... | ... |
-
-Response Example:
-
-```json
-{
-	"code":0,
-	"data":
-		{"Dates":[],
-		"currentMovie":"",
-		"cinemaDetailModel":{"callboard":"","brd":"其它","dis":"","tel"["029-84561999","400-899-9527"],"suw":"","dri":"","note":"","dealtp":0,"deals":"","preferential":0,"sellmin":0,"sell":true,"lat":34.20359,"lng":108.98846,"ct":"安","imax":0,"snum":42,"nm":"奥斯卡金地国际影城(金地广场)","price":0,"s":8.285714,"s1":8.285714,"s2":8.476191,"s3":8.238095,"featureTags":[{"desc":"限网上选座后取票","type":1,"tag":"取票机"},
-		{"desc":"一号激光厅，152个座位；二号激光厅，152个座位；三号激光厅，152个座位；四号厅，195个座位；五号激光厅，113个座位；六号激光厅，116个座位；七号激光厅，113个座位","type":19,"tag":"60帧厅"},{"desc":"I Do巨幕厅，447个座位；巨幕厅","type":15,"tag":"杜比全景声厅"},{"desc":"1.3米以下儿童可免费观看电影（无座），每位成人仅限携带1名免票儿童。","type":7,"tag":"儿童优惠"}],"park":"","addr":"雁塔区曲江池东路金地广场4楼（飞象披萨对面）","area":"雁塔区","bus":"","id":11533},"movies":[{"img":"http://p1.meituan.net/165.220/movie/4185bf22758d232e15c5bf52f89a7553867763.png","sc":7,"preferential":0,"ver":"2D/3D/IMAX 3D/中国巨幕","nm":"新木乃伊","isShowing":true,"id":249895},{"img":"http://p1.meituan.net/165.220/movie/f013c57e9506cd2e7c609397c8da04d9213647.jpg","sc":8.6,"preferential":0,"ver":"3D/IMAX 3D/中国巨幕/全景声","nm":"神奇女侠","isShowing":true,"id":247731},
-		...
-```
-
-- [选座信息](#选座信息)
-
-## 选座信息
-
-Request
-
-```
-GET /api/seat?showId&showDate
-```
-
-返回数据为一组*座位状态信息*
-
-*选座信息* Properties:
-
-| Property | Type | Description |
-|----------|------|-------------|
-|  code | INTEGER | 该座位状态码 |
-|  messege | STRING | 状态信息 |
-
-Response Example:
-
-```json
-{
-    "code":0,
-	"message":"OK"
-}
-```
-
-- [区域类](#区域类)
-    - [获取全部区域列表](#获取全部区域列表)
-<a name="电影类"></a>
+<a name="区域类"></a>
 ## 区域类
 
 <a name="获取全部区域列表"></a>
@@ -400,7 +305,7 @@ Response Example:
 Request URI:
 
 ```
-GET /api/air
+GET /api/area
 ```
 
 返回数据为一组*全部区域*集合
@@ -409,35 +314,32 @@ GET /api/air
 
 | Property | Type | Description |
 |----------|------|-------------|
-|  code | INTEGER | 状态码 |
 |  id | INTEGER | 区域编码 |
 |  nm | STRING | 区域名称 |
-|  message | STRING | 状态信息 |
 
 Response Example:
 
 ```json
 {
-    {"code":0,
-	"data":[{"id":0,"nm":"番禺区"},
-	{"id":1,"nm":"白云区"},
-	{"id":2,"nm":"天河区"},
-	{"id":3,"nm":"海珠区"},
-	{"id":4,"nm":"越秀区"},
-	{"id":5,"nm":"荔湾区"},
-	{"id":6,"nm":"增城区"},
-	{"id":7,"nm":"花都区"},
-	{"id":8,"nm":"黄埔区"},
-	{"id":9,"nm":"南沙区"},
-	{"id":10,"nm":"从化区"}],
+    {
+    "code":0,
+	"data":[
+    	{"id":0,"nm":"番禺区"},
+    	{"id":1,"nm":"白云区"},
+    	{"id":2,"nm":"天河区"},
+    	{"id":3,"nm":"海珠区"},
+    	{"id":4,"nm":"越秀区"},
+    	{"id":5,"nm":"荔湾区"},
+    	{"id":6,"nm":"增城区"},
+    	{"id":7,"nm":"花都区"},
+    	{"id":8,"nm":"黄埔区"},
+    	{"id":9,"nm":"南沙区"},
+    	{"id":10,"nm":"从化区"}
+	],
 	"message":"OK"}
 }
 ```
 
-- [影院类](#影院类)
-    - [获取全部影院列表](#获取影院信息)
-    - [获取所在区域影院列表](#获取影院信息)
-    - [获取按距离获取所在区域影院列表](#获取按距离获取所在区域影院列表)
 <a name="影院类"></a>
 ## 影院类
 
@@ -490,13 +392,13 @@ Response Example:
     "message": "OK"
 }
 ```
-
+<a name="获取所在区域影院信息"></a>
 ### 获取所在区域影院信息
 
 Request URI:
 
 ```
-GET /api/cinema//${areaId}
+GET /api/cinema/${areaId}
 ```
 
 返回数据为一组*所在区域影院信息*集合
@@ -540,6 +442,7 @@ Response Example:
 }
 ```
 
+<a name="获取按经纬度排序区域影院信息"></a>
 ### 获取按经纬度排序区域影院信息
 
 Request URI:
@@ -589,3 +492,140 @@ Response Example:
 }
 ```
 
+<a name="电影排期类"></a>
+## 电影排期类
+
+<a name="获取电影排期"></a>
+### 获取电影排期
+
+Request URI:
+
+```
+GET /api/show?cinemaId=${cinemaId}&movieId=${movieId}
+```
+
+返回数据为影厅及对应排场信息
+
+*影片上映信息及排场信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+|  Dates | STRING | 上映日期 |
+|  cinemaDetailModel | MAP | 影院详情 |
+|  sells | BOOLEAN | 是否在售 |
+|  lat | STRING | 纬度 |
+|  lng | STRING | 经度 |
+|  ct | STRING | 城市 |
+
+<a name="座位类"></a>
+## 座位类
+
+<a name="获取场次座位实时信息"></a>
+### 获取场次座位实时信息
+
+Request
+
+```
+GET /api/seat?showId=${showId}&showDate=${showDate}
+
+showDate 格式为 yyyy-MM-dd
+如：
+http://movie.kaocat.com/api/seat?showId=80000&showDate=2017-06-12&format
+```
+
+返回数据为一组*座位状态信息*
+
+*选座信息* Properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| rows | INTEGER | 选区行数 |
+| columns | INTEGER | 选区列数 |
+| sectionId | INTEGER | 选区Id |
+| sectionName | INTEGER | 选区名 |
+| seatRows | OBJECT | 行座位数据 |
+
+
+Response Example:
+
+```json
+{
+  "code": 0,
+  "message": "OK",
+  "data": [
+    {
+      "rows": 15,
+      "sectionId": "0000000000000001",
+      "sectionName": "普通区",
+      "columns": 26,
+      "seatRows": [
+        {
+          "seats": [
+            {
+              "rowId": "1",
+              "rowNum": 1,
+              "columnId": "",
+              "seatNo": "0000000000000001-1-22",
+              "columnNum": 0,
+              "type": "E"
+            },
+            {
+              "rowId": "1",
+              "rowNum": 1,
+              "columnId": "23",
+              "seatNo": "0000000000000001-1-23",
+              "columnNum": 1,
+              "type": "N"
+            },
+            ...
+        ],
+        ...
+        }
+    ]
+}
+```
+
+
+<a name="用户类"></a>
+## 用户类
+
+<a name="换取token"></a>
+### 换取token
+
+Request
+
+```
+POST /api/token
+
+参数
+timestamp    - 时间戳（必需）
+openId       - 微信返回用户标识OpenId（必需）
+```
+
+
+<a name="订单类"></a>
+## 订单类
+
+<a name="下单"></a>
+### 下单
+
+Request
+
+```
+POST /api/order
+
+参数
+timestamp    - 时间戳（必需）
+token        - 服务端获取的 token（必需）
+showId       - 上映场次Id
+seatNo       - 座位序列号（必需）
+```
+
+<a name="获取订单列表"></a>
+### 获取订单列表
+
+Request
+
+```
+GET /api/order?token=${token}
+```

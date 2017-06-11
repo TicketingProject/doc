@@ -14,6 +14,10 @@
 - [API接口文档](https://github.com/TicketingProject/doc/blob/master/server-docs/api.md)
 - [UI规范](https://github.com/TicketingProject/doc/blob/master/UI%E8%A7%84%E8%8C%83.md)
 
+## Explain
+
+由于仓库从个人到组织进行了一次迁移，所以导致部分commit记录丢失。
+
 ## Iterations
 
 ### Iteration 1

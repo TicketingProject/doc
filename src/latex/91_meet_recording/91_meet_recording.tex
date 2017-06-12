@@ -1,0 +1,129 @@
+%!Tex Program = xelatex
+\documentclass[12pt,twoside]{article}
+\input{../common.tex}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usetikzlibrary{arrows,positioning}
+
+\begin{document}
+
+\thispagestyle{empty}
+  \begin{center}
+    \bfseries
+    \nbvspace[2]
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\textwidth]{../logo.pdf}
+    \end{figure}
+    {\Huge GDPLS Movie} \\[10pt]
+    {\LARGE\akaDora Grand Duke of Programming Language Script}\\[10pt]
+    {\Huge 2017 June} \\
+    \nbvspace[1]
+    \Huge Meeting Record\\
+    \nbvspace[1]
+    \normalsize Generated \& Compiled By \XeLaTeX
+    \nbvspace[3]
+  \end{center}
+  \newpage
+
+  \lhead{\emph{VISION TABLE}}
+  \begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.3}
+    \rowcolors{2}{blue!50}{blue!20}
+    \begin{tabular}{lllp{25em}}
+      %\rowcolors{1}{blue!80}{blue!10}
+      \multicolumn{4}{c}{\heiti 版本日志}\\
+      版本号 & 修改人 & 修改时间 & \multicolumn{1}{c}{说明} \\
+      0.0.0 & 郑斯达 & 2016.3.23 & 会议记录\\
+      1.0.0 & 方铭 & 2016.3.23 & 加封面排版\\
+      &&&\\
+      &&&\\ % span text width
+    \end{tabular}
+  \end{table}
+  \newpage
+
+
+\begin{flushleft}
+\large
+  {\bf 会议时间}： 2017年03月23日 19:00-20:28
+
+\par {\bf 会议地点}： 至善学生活动中心公共讨论区
+\par {\bf 主 持 人}：徐家豪
+\par {\bf 参会人员}：陈锐煌、卢卓君、徐广晖、方铭
+\par {\bf 记 录 人}：郑斯达
+\par {\bf 会议议题}：构建新一代电影购票服务网站
+\par {\bf 会议内容}：
+2017年03月23日，徐家豪项目经理，召集客户经理卢卓君，总工程师徐广晖、工程师、配置经理郑斯达，质量保证经理方铭，技术经理徐广晖，测试工程师陈锐
+煌，在至善学生活动中心公共讨论区开会，启动了构建新一代电影购票服务网站项目，会议形成如下意见：
+\end{flushleft}
+
+\section{购票体验}
+流程：\\
+选择影院->选择电影(查看电影的相关信息)->选择座位->买票->取票\\
+(或选择电影->选择影院(查看影院的相关信息)->选择座位->买票->取票)
+\par
+电影的相关信息：电影的简要信息、现有的评价、电影的场次、其他信息。
+\par
+影院的相关信息：影院的地点距离、影院的大小场次、影院的评价、影院附近的景点美食
+\par
+结论：必须加入电影的相关信息与影院的相关信息。加入评论功能，只有看过电影之后才能评论。
+\section{核心亮点}
+\begin{enumerate}
+  \item 一键购票
+  \item 选择好电影和时间段
+  \item 一键选择影院，场次，座位
+\end{enumerate}
+
+\section{辅助亮点}
+
+\begin{enumerate}
+  \item 好友功能：能够对自己的好友发起看电影请求
+  \item 约票功能：能够与附近同样像看同一部电影的人匹配，帮助选定座位和场次。
+  \item 推荐导演的其他电影
+\end{enumerate}
+
+
+\href{http://blog.csdn.net/myzczx/article/details/52497374#_Toc450478455}{参考链接}
+
+\section{思维导图}
+
+\par 电影订票系统
+
+\begin{center}
+  \begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {电影订票系统}
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+      node[concept] {用户需求}
+      [clockwise from=90]
+      child { node[concept] {简化订票流程} }
+      child { node[concept] {推荐电影} }
+      child { node[concept] {综合排序比较} }
+      child { node[concept] {影评互动} }
+    }
+    child[concept color=blue] {
+      node[concept] {核心业务}
+      [clockwise from=-30]
+      child { node[concept] {一键购票} }
+      child { node[concept] {选择好电影和时间段}}
+      child { node[concept] {一键选择影院，场次，座位} }
+    }
+    child[concept color=orange] {
+      node[concept] {辅助业务}
+      [clockwise from=-70]
+      child { node[concept] {好友功能} }
+      child { node[concept] {约票功能}}
+      child { node[concept] {一键选择影院，场次，座位} }
+    }
+    child[concept color=red] { node[concept] {实现}
+    [clockwise from=100]
+        child { node[concept] {Android}}
+        child { node[concept] {HTML5}}
+    };
+\end{tikzpicture}
+\end{center}
+
+
+\end{document} 

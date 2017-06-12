@@ -1,0 +1,71 @@
+﻿%!Tex Program = xelatex
+\documentclass[a4paper]{article}
+\input{../common.tex}
+\usepackage{tikz}
+
+\begin{document}
+  \thispagestyle{empty}
+  \begin{center}
+    \bfseries
+    \nbvspace[2]
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\textwidth]{../logo.pdf}
+    \end{figure}
+    {\Huge GDPLS Movie} \\[10pt]
+    {\LARGE\akaDora Grand Duke of Programming Language Script}\\[10pt]
+    {\Huge 2017 June} \\
+    \nbvspace[1]
+    \Huge Backlog Initial\\
+    \nbvspace[1]
+    \normalsize Generated \& Compiled By \XeLaTeX
+    \nbvspace[3]
+  \end{center}
+  \newpage
+
+  \lhead{\emph{VISION TABLE}}
+  \begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.3}
+    \rowcolors{2}{blue!50}{blue!20}
+    \begin{tabular}{lllp{28em}}
+      %\rowcolors{1}{blue!80}{blue!10}
+      \multicolumn{4}{c}{\heiti 版本日志}\\
+      版本号 & 修改人 & 修改时间 & \multicolumn{1}{c}{说明} \\
+      0.0.0 & 徐佳豪 & 2016.5.6 & 根据项目启动会议制作的BACKLOG初稿\\
+      1.0.0 & 方铭 & 2016.5.6 & 加封面排版\\
+      &&&\\
+      &&&\\ % span text width
+    \end{tabular}
+  \end{table}
+  \newpage
+  \lhead{\emph{产品BLACKLOG}}
+%  \section{产品特性}
+  \begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.3}
+    \rowcolors{1}{gray!50}{white}
+    \begin{tabular}{llcp{15em}p{7em}}
+    名称  & 对象  & 重要性  & 具体内容 & 备注 \\
+    首页\&查找电影 & 用户 & S & 进入页面，显示当前热映(或即将上映)电影的列表，以供用户选择& 界面要简洁美化，突出重点 \\
+    注册   & 用户 & A & 为初次使用的用户提供注册。提供手机号邮箱注册，微信QQ注册等方式 & 手机邮箱注册提供验证码 \\
+    登录   & 用户   & S & 实现用户的登录功能  & 用户可以直接使用微信QQ等登录，免注册 \\
+    电影详情   &用户  & S  & 显示电影的简介，评分，实时票房，评论等  & 用户可评价 \\
+    查找影院   & 用户 & S & 显示影院的名称、地点、实景图、评价等等信息& 用户可评价 \\
+    选择场次  & 用户 & S & 当用户选择了影院与电影之后，显示当前电影的场次价格列表 & 无\\
+    选择座位  & 用户 & A & 当用户选择了场次时候，提供座位的选择 & 标明最佳观影位置\\
+    支付 & 用户 & S & 在用户确定了座位之后，就可以直接下单，支付 & 可以使用微信支付宝支付\\
+    购票凭证 & 用户 & S & 用户购票之后，提供凭证寄予用户取票 & 需要在其他页面有一个按钮快速进入凭证\\
+    导航功能 & 用户 & A & 在凭证页面，可以选择影院导航，方便用户查找 & 可以跳转到其他导航\\
+    一键购票 & 用户 & B & 在首页进入一键选座，选定时间范围和电影之后，将直接设定默认值，节约用户的时间 & 一定要给予用户选择的权力\\
+    约影功能  & 用户 & C & 发起广播，约同样想看某部电影但是没有人约的人 & 加入匹配条件\\
+    附近特色  & 用户 & C & 搜索电影院旁边的店铺，方便看电影前后的娱乐消遣 & 无\\
+    邀请好友  & 用户 & C & 可以将电影相关的信息的链接发送给好友 & 可分享到各种平台\\
+    上传电影信息 & 电影院 & S & 上传电影相关的信息 & 主要是场次，座位等信息\\
+    更新电影信息 & 电影院 & S & 对上传的信息进行更新 & 操作与上传一样\\
+    意外赔付 & 用户\&电影院 & A & 如果出现意外情况导致电影无法正常上映，相对应的沟通与赔付功能 & 为了减少争议，在购票时就制订对应的规则 \\
+    查看当前情况 & 电影院 & A & 实时查看当前购票数据，以规划未来的排片 & 无\\
+    \end{tabular}
+  \end{table}
+
+\end{document}

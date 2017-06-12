@@ -1,0 +1,83 @@
+﻿%!Tex Program = xelatex
+\documentclass[a4paper]{article}
+\input{../common.tex}
+\usepackage{tikz}
+
+\begin{document}
+  \thispagestyle{empty}
+  \begin{center}
+    \bfseries
+    \nbvspace[2]
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\textwidth]{../logo.pdf}
+    \end{figure}
+    {\Huge GDPLS Movie} \\[10pt]
+    {\LARGE\akaDora Grand Duke of Programming Language Script}\\[10pt]
+    {\Huge 2017 June} \\
+    \nbvspace[1]
+    \Huge Use Case\\
+    \nbvspace[1]
+    \normalsize Generated \& Compiled By \XeLaTeX
+    \nbvspace[3]
+  \end{center}
+  \newpage
+
+  \lhead{\emph{VISION TABLE}}
+  \begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.3}
+    \rowcolors{2}{blue!50}{blue!20}
+    \begin{tabular}{lllp{28em}}
+      %\rowcolors{1}{blue!80}{blue!10}
+      \multicolumn{4}{c}{\heiti 版本日志}\\
+      版本号 & 修改人 & 修改时间 & \multicolumn{1}{c}{说明} \\
+      1.0.0 & 方铭 & 2017.5.6 & 设计初稿\\
+      &&&\\
+      &&&\\ % span text width
+    \end{tabular}
+  \end{table}
+  \newpage
+  \lhead{}
+  \section{User Case 图}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{buyer.png}
+    \caption{购票系统}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{admin.png}
+    \caption{票务管理系统}
+  \end{figure}
+  \section{User Case 文本}
+  \subsection*{Brief Level}
+  \par 用户登录，购票
+  \subsection*{Casual Level}
+  \begin{description}
+    \item[Actors：] 买家，售票服务器
+    \item[Description：] 买家可以和别的买家发起加好友申请，对方回应后就可以互相加为好友；添加好友后，就可以邀请对方一起观看同一部电影；
+    最后买家可以对观看过的电影写上自己的评价与评分，供其他人参考。
+  \end{description}
+  \subsection*{Detailed Level}
+  \begin{description}
+    \item[Use Case：] 查看电影信息
+    \item[Actors：] 买家，售票方
+    \item[Purpose：] 买家在购票之前，需要知道详细的关于该部电影信息
+    \item[Main Success Scenario：] 买家选定一部电影，然后查看详细信息，然后徐就显示出电影的导演，主要演员、售价、上映时间、影院等信息。
+    \item[Precondition：] 售票方拿到了该电影的售票权
+    \item[Variations：]
+    \begin{enumerate}
+      \item 实际的售票价格可能与预期的有差别。
+      \item 电影公布的信息和实际的影片中的信息有出入。
+      \item 上映时间推迟。
+    \end{enumerate}
+    \item[Extensions：]
+    \begin{enumerate}
+      \item 买家发现信息错误，可以提供修改的建议。
+      \item 票价和上映时间提供一个合理的波动范围。 
+      \item 放映的影院可以动态添加和删除。
+    \end{enumerate}
+  \end{description}
+
+\end{document}

@@ -63,6 +63,7 @@ git merge branchName 将分支branchName与当前分支合并
 ![显示冲突](http://i2.muimg.com/1949/54825236ab60b413.png)
 
 如果远程仓库中存在本地仓库中不存在的分支，则需要先创建分支并建立与远程分支的链接。
+
 ```
 git branch --set-upstream dev origin/<branch>
 ```

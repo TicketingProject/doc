@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>240</x>
+      <y>60</y>
+      <w>150</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Web Server&gt;&gt;
+Proxy Server
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>450</x>
+      <y>190</y>
+      <w>140</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;App Server&gt;&gt;
+Service Server 1
+{Node}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>260</x>
+      <y>180</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Nginx</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>0</x>
+      <y>220</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;WeChat mini apps&gt;&gt;
+Client
+{JSON data}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>470</x>
+      <y>270</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+koa</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>630</x>
+      <y>290</y>
+      <w>140</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Server&gt;&gt;
+DBMS
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>640</x>
+      <y>350</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+MySQL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>630</x>
+      <y>150</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Server&gt;&gt;
+Cache
+{Redis}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>250</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>HTTP</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>240</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>HTTPS</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>330</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Sequelize</panel_attributes>
+    <additional_attributes>110.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>190</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+</diagram>

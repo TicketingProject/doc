@@ -1,0 +1,67 @@
+﻿%!Tex Program = xelatex
+\documentclass[a4paper]{article}
+\input{../common.tex}
+\usepackage{tikz}
+
+\begin{document}
+  \thispagestyle{empty}
+  \begin{center}
+    \bfseries
+    \nbvspace[2]
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\textwidth]{../logo.pdf}
+    \end{figure}
+    {\Huge GDPLS Movie} \\[10pt]
+    {\LARGE\akaDora Grand Duke of Programming Language Script}\\[10pt]
+    {\Huge 2017 June} \\
+    \nbvspace[1]
+    \Huge Architecture Documentation\\
+    \nbvspace[1]
+    \normalsize Generated \& Compiled By \XeLaTeX
+    \nbvspace[3]
+  \end{center}
+  \newpage
+
+  \lhead{\emph{VISION TABLE}}
+  \begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.3}
+    \rowcolors{2}{blue!50}{blue!20}
+    \begin{tabular}{lllp{28em}}
+      %\rowcolors{1}{blue!80}{blue!10}
+      \multicolumn{4}{c}{\heiti 版本日志}\\
+      版本号 & 修改人 & 修改时间 & \multicolumn{1}{c}{说明} \\
+      0.0.0 & 徐广晖 & 2017.6.2 & 手稿\\
+      1.0.0 & 方铭 & 2017.6.6 & UMLet绘图并排版制作封面\\
+      &&&\\
+      &&&\\ % span text width
+    \end{tabular}
+  \end{table}
+  \lhead{\emph{}}
+  %\nbvspace[3]
+  \newpage
+  \section{功能与非功能性需求}
+  需求表格
+  \vspace{-1em}
+  \begin{table}[H]
+    \centering
+    \includegraphics%[width=\textwidth]
+    {table.pdf}
+  \end{table}
+  %\newpage
+  \section{RUP架构}
+  %\subsection{逻辑模型}
+  \indent 逻辑模型
+  \vspace{-2em}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{RUP.pdf}
+  \end{figure}
+  \par 部署模型
+  \vspace{-2em}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{RUP_model.pdf}
+  \end{figure}
+\end{document}

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>120</x>
+      <y>144</y>
+      <w>88</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>MVC
+--
+koa
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>488</x>
+      <y>240</y>
+      <w>120</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Domain Model
+--
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>120</x>
+      <y>208</y>
+      <w>88</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>RESTFul
+--
+koa-router
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>120</x>
+      <y>280</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>persistence
+--
+Squelize
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>120</x>
+      <y>360</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>log
+--
+loa-logger
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>272</x>
+      <y>120</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Cinema Seat
+--
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>288</x>
+      <y>144</y>
+      <w>64</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>
+--
+info AJAX
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>368</x>
+      <y>144</y>
+      <w>64</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>
+--
+order AJAX
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>160</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>272</x>
+      <y>208</y>
+      <w>168</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Services Layer
+--
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>288</x>
+      <y>232</y>
+      <w>64</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>
+--
+View 
+Relevant 
+Information
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>368</x>
+      <y>232</y>
+      <w>64</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>
+--
+Booking
+Service 
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>272</x>
+      <y>304</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Reposities Layer
+--
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>296</x>
+      <y>328</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>
+--
+DAO*
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>376</x>
+      <y>328</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>
+--
+DAO*
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>320</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>90.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>184</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>184</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>280</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>280</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>360</x>
+      <y>400</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Ticket System</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>112</y>
+      <w>24</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>272</x>
+      <y>400</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Elemantary
+Data</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>104</x>
+      <y>120</y>
+      <w>152</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Tech Support Layer
+--
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>264</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>336</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+</diagram>
